@@ -30,6 +30,17 @@ function create_custom_post_types() {
             'rewrite' => array( 'slug' => 'case-studies' ),
         )
     );
+
+		register_post_type('about',
+        array(
+            'labels' => array(
+                'name' => __( 'services' ),
+                'singular_name' => __( 'service' )
+            ),
+            'public' => true,
+            'rewrite' => array( 'slug' => 'about' ),
+        )
+    );
 }
 add_action( 'init', 'create_custom_post_types' );
 
@@ -52,8 +63,8 @@ add_filter( 'body_class','accelerate_child_body_classes' );
 function accelerate_child_body_classes( $classes ) {
 
 
-  if (is_page('contact') ) {
-    $classes[] = 'contact';
+  if (is_page('contact-us') ) {
+    $classes[] = 'contact-us';
   }
 
     return $classes;
