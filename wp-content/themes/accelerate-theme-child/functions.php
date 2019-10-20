@@ -9,14 +9,12 @@
 * @subpackage Accelerate Marketing
 * @since Accelerate Marketing 2.0
 */
-
 // Enqueue scripts and styles
 function accelerate_child_scripts(){
 	wp_enqueue_style( 'accelerate-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'accelerate-style' ));
 }
 add_action( 'wp_enqueue_scripts', 'accelerate_child_scripts' );
-
 // Custom post types functions
 function create_custom_post_types() {
     register_post_type('case_studies',
@@ -30,20 +28,18 @@ function create_custom_post_types() {
             'rewrite' => array( 'slug' => 'case-studies' ),
         )
     );
-
-		register_post_type('about',
+		register_post_type('services',
         array(
             'labels' => array(
                 'name' => __( 'services' ),
                 'singular_name' => __( 'service' )
             ),
             'public' => true,
-            'rewrite' => array( 'slug' => 'about' ),
+            'rewrite' => array( 'slug' => 'services' ),
         )
     );
 }
 add_action( 'init', 'create_custom_post_types' );
-
 // Defines custom markup for post comments
 function skillcrushstarter_comments($comment, $args, $depth) {
 	$comment  = '<li class="comment">';
@@ -55,18 +51,12 @@ function skillcrushstarter_comments($comment, $args, $depth) {
 	$comment .= '<p>' . get_comment_text() . '</p>';
 	$comment .= '</div>';
 	$comment .= '</li>';
-
 	echo $comment;
 }
-
 add_filter( 'body_class','accelerate_child_body_classes' );
 function accelerate_child_body_classes( $classes ) {
-
-
   if (is_page('contact-us') ) {
     $classes[] = 'contact-us';
   }
-
     return $classes;
-
 }

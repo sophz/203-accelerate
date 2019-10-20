@@ -1,6 +1,17 @@
+/*
+Theme Name:   Accelerate Theme Child
+Theme URI:    http://example.com/accelerate-theme-child/
+Description:  Accelerate Child Theme - Accelerate
+Author:   	Your Name!
+Author URI:   http://example.com
+Template: 	accelerate-theme
+Version:      2.0.0
+Tags:     	light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  accelerate-theme-child
+*/
+
 .home-page {
     background: url("img/taxi-photo.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
-
 }
 
 #masthead {
@@ -8,8 +19,7 @@
 }
 
 .button {
-	background: none repeat scroll 0 0 #45ac9d;
-
+  background: none repeat scroll 0 0 #45ac9d;
 }
 
 .blog-post {
@@ -37,69 +47,13 @@
 }
 
 /* Case Studies */
+
 aside.case-study-sidebar {
   float: left;
   width: 300px;
-
 }
 
 div.case-study-images {
   float: left;
-  width: 606px;
-}
-
-/* Case Studies Archive */
-div.case-study-images img {
-	width: 100%;
-	height: auto;
-}
-
-/* navigation */
-
-/* Hide content visually but make available to screen readers */
-
-.screen-reader-text {
-    position: absolute !important;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    width: 1px;
-    height: 1px;
-    /* many screen reader and browser combinations announce broken words as they would appear visually */
-    word-wrap: normal !important;
-}
-
-/* navigation */
-
-nav ul li {
-  list-style: none;
-  display: inline-block;
-}
-
-/* Contact Us */
-.one-half-first,
-.one-half-second {
-  float: left;
-}
-
-.ninja-forms-req-symbol {
-  display: none;
-}
-
-#nf-field-4 {
-  background-color: #45ac9d;
-  float: right;
-}
-
-.nf-field-label {
-  font-size: 1em;
-}
-
-.contact-us .main-content{
-  width: 50%;
-}
-
-/* About Us */
-
-.about-page {
-      background: url("img/taxi-photo.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
+  width: 600px;
 }

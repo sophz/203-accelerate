@@ -11,7 +11,6 @@
  * @subpackage Accelerate Marketing
  * @since Accelerate Marketing 2.0
  */
-
 get_header(); ?>
 
 	<div id="primary" class="site-content sidebar">
@@ -24,29 +23,38 @@ get_header(); ?>
 		</div><!-- .main-content -->
 	</div><!-- #primary -->
 
-  <div>
-  <h1>Our Services</h1>
-  <p>We take pride in our clients and the content we create for them. Here's a brief overview of our offered services</p>
-</div>
+<section class="about-page our-services">
+  <div class="our-services">
+  <div class="services-header">
+      <h1>Our Services</h1>
+      <p>We take pride in our clients and the content we create for them. Here's a brief overview of our offered services</p>
+  </div>
 
-<section class="services">
+<div class="services">
     <?php query_posts('post_type=about'); ?>
-
-        <?php while ( have_posts() ) : the_post();
-        $services_offered = get_field("services_offered");
+    <?php while ( have_posts() ) : the_post();
+        $description = get_field("description");
         $icon = get_field("icon");
         $size = "full";
-        ?>
+    ?>
 
-      <div class="service">
+      <div class="individual-service">
+        <div class="service-wrapper">
           <figure>
             <?php echo wp_get_attachment_image($icon, $size); ?>
           </figure>
           <div class="service-description">
-            <h4><?php echo $services_offered; ?></h4>
-            <?php the_content(); ?>
+            <h2><?php the_title(); ?></h2>
+            <p><?php echo $description; ?></p>
           </div>
+        </div>
+      </div>
+      
         <?php endwhile;?>
         <?php wp_reset_query(); ?>
+
+
+      </div>
+    </div>
 </section>
 <?php get_footer(); ?>
