@@ -58,7 +58,7 @@
 	font-size: 1.5em;
 }
 .read-more-link {
-    font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
+  font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
 	color: #45ac9d;
 	text-transform: uppercase;
 }
@@ -87,4 +87,22 @@ div.case-study-images img {
     width: 100%;
 	margin-bottom: 3.125em;
 	border: 1px solid #dddddd;
+}
+
+/* Social Media Nav */
+ul {
+  list-style: none;
+}
+
+li#menu-item-13,
+li#menu-item-14,
+li#menu-item-47379 {
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+}
+
+li.individual-featured-work {
+  display: inline-block;
+  width: 300px;
 }
