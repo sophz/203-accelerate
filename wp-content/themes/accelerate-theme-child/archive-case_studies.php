@@ -38,7 +38,6 @@ get_header(); ?>
           </a>
         </div>
       </article>
-				<?php the_content(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 

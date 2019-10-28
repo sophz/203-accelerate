@@ -48,6 +48,12 @@
 }
 
 /* blog post on homepage */
+.blog-post {
+	width: 50%;
+	float: left;
+	margin-bottom: 2em;
+}
+
 .blog-post h4 {
 	font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
 	color: #a6a6a6;
@@ -89,6 +95,16 @@ div.case-study-images img {
 	border: 1px solid #dddddd;
 }
 
+/* Case study archive */
+.case-study-sidebar,
+.case-study-images {
+  float: left;
+}
+
+.case-study-sidebar {
+  width: 340px;
+}
+
 /* Social Media Nav */
 ul {
   list-style: none;
@@ -105,4 +121,75 @@ li#menu-item-47379 {
 li.individual-featured-work {
   display: inline-block;
   width: 300px;
+}
+
+/* About page */
+div.about-header {
+  background: url("img/about-header.png") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
+  height: auto;
+  margin: 0 0 1em;
+  padding: 6em 0;
+  color: white;
+}
+
+div.about-header-wrapper {
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.about-services {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 487px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.about-services h2 {
+  text-transform: uppercase;
+}
+
+.individual-service h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.individual-service h5 {
+  font-size: .70em;
+  font-weight:500;
+}
+
+aside.individual-service {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+div.service-description {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+}
+
+div.service-icon {
+  width: 221px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.individual-service:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* 404 page */
+
+.go-home-link {
+  color: #45ac9d;
 }
